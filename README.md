@@ -87,38 +87,38 @@ Cocos2d-x开发环境生成的目录结构如下图所示，将SDK目录更名�
 
 4. 修改proj.android/AndroidManifest.xml文件，确保声明了如下的权限：
 
-    ```
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    ```
+  ```
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+  <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.BLUETOOTH" />
+  ```
 
 5. 打开eclipse，导入上一步Android工程，在项目的第一个启动的AppActivity（找到AppActivity.java文件）中导入package:
 
-   ```
-   import  com.youme.voiceengine.mgr.YouMeManager;
-   import  com.youme.voiceengine.*;
-   ```   
+  ```
+  import  com.youme.voiceengine.mgr.YouMeManager;
+  import  com.youme.voiceengine.*;
+  ```   
 然后在onCreate方法里添加如下代码(没有此方法的话需要自己补上)：
 
-    ```
-    @Override
-    public void onCreate(Bundle savedInstanceState)
-    {
-        //以下两个函数调用顺序不能错
-        YouMeManager.Init(this);
-        super.onCreate(savedInstanceState);
+  ```
+  @Override
+  public void onCreate(Bundle savedInstanceState)
+  {
+      //以下两个函数调用顺序不能错
+      YouMeManager.Init(this);
+      super.onCreate(savedInstanceState);
 
-    }
+  }
 
-    ```
+  ```
 
 ### iOS系统XCode开发环境配置
 添加头文件和依赖库:
