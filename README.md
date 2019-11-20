@@ -102,14 +102,14 @@ Cocos2d-x开发环境生成的目录结构如下图所示，将SDK目录更名�
 
 5. 打开eclipse，导入上一步Android工程，在项目的第一个启动的AppActivity（找到AppActivity.java文件）中导入package:
 
-    ```
+   ```
    import  com.youme.voiceengine.mgr.YouMeManager;
    import  com.youme.voiceengine.*;
    ```   
 然后在onCreate方法里添加如下代码(没有此方法的话需要自己补上)：
 
     ```
- @Override
+    @Override
     public void onCreate(Bundle savedInstanceState)
     {
         //以下两个函数调用顺序不能错
