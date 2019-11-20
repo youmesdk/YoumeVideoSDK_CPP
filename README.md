@@ -1,10 +1,10 @@
 # Video SDK for Cocos2d C++ 使用指南
 
-##适用范围
+## 适用范围
 
 本规范仅适用于使用游密实时音视频引擎Cocos2d-x接口（C++接口）开发多人实时语音功能的开发者。
 
-##SDK目录概述
+## SDK目录概述
 
 语音SDK中有两个子文件夹：lib、include,下面依次介绍下这两个子文件夹。
 
@@ -15,7 +15,7 @@
     * `YouMeConstDefine.h`包含语音SDK的所有枚举类型定义，如错误码等。
 2. `lib`：库文件，分为Android平台和iOS平台。Android平台下包括ARMv5、ARMv7和X86三种CPU架构下的libyoume_voice_engine.so文件，还包括youme_voice_engine.jar。iOS平台下包含libyoume_voice_engine.a文件。
 
-##开发环境集成
+## 开发环境集成
 
 Cocos2d-x开发环境生成的目录结构如下图所示，将SDK目录更名为youme_voice_engine（内含“include”和“lib”两个子文件夹），并复制到游戏的根目录下，这个目录下包含了Android和iOS两个平台所需的所有C++头文件和库文件。
 ![](/doc/images/talk_cocos_project_directory.png)
@@ -103,8 +103,8 @@ Cocos2d-x开发环境生成的目录结构如下图所示，将SDK目录更名�
 5. 打开eclipse，导入上一步Android工程，在项目的第一个启动的AppActivity（找到AppActivity.java文件）中导入package:
 
     ```
-import  com.youme.voiceengine.mgr.YouMeManager;
-import  com.youme.voiceengine.*;
+   import  com.youme.voiceengine.mgr.YouMeManager;
+   import  com.youme.voiceengine.*;
    ```   
 然后在onCreate方法里添加如下代码(没有此方法的话需要自己补上)：
 
@@ -126,4 +126,5 @@ import  com.youme.voiceengine.*;
 2. 添加库文件路径：在`Build Settings` -> `Search Paths` -> `Library Search Paths`中添加`../youme_voice_engine/lib/ios/Release-universal` （建议直接将此Release-universal文件夹拖到xcode需要填入的位置，然后路径会自动生成);
 3. 添加依赖库：在`Build Phases`  -> `Link Binary With Libraries`下添加：`libsqlite3.0.tbd`、`libyoume_voice_engine.a`、`libz.dylib`、`libz.1.2.5.tbd`、`libresolv.9.tbd`、`SystemConfiguration.framework`、`CoreTelephony.framework`、`AVFoundation.framework`、`AudioToolBox.framework`、`CFNetwork.framework`。
 
-
+### 备注：
+[详细接口介绍可查看“Video SDK for Cocos2d-API手册.md”文档](https://github.com/youmesdk/YoumeVideoSDK_CPP/blob/master/Video%20SDK%20for%20Cocos2d-API%E6%89%8B%E5%86%8C.md)
